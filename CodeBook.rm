@@ -1,0 +1,44 @@
+** CodeBook.md - A code book for submit repository.
+** Introduction
+The data used is data representing data collected from the accelerometers from the Samsung Galaxy S smartphone.  Only measurements on the mean and standard deviation for each measurement were collected.  This resulted in extracting 18 measurements out of 561.
+There were 7,352 observations in the training data and 2,947 in the test data.
+
+** The files
+The actual measurements were in X_test.txt and X_train.txt.
+The associated subjects (numbered 1 to 30) were in separate files:  subject_test.txt and subject_train.txt
+The associated activities (numbered 1 to 6) were also in separate files:  y_test.txt and y_train.txt.
+** Processing the data
+All processing and cleaning was done with a single R file, Project.R.
+The first step was to read in the measurements file with 561 columns and then delete all columns that were not measurements of standard deviation or mean.  That left 18 columns.
+The next step was to combine the measurements with the corresponding subject and activity, since all three groups comprised a single observation.
+Next both the test and training data was combined into a single data frame.
+Next the activity (numbered 1 to 6) was replaced with a more descriptive name as follows:
+* walking
+* walking_upstairs
+* walking_downstairs
+* sitting
+* standing
+* laying
+Finally the resulting data set was written to a Project.CSV file.  This file was copied to Project.txt for submission to Coursera.
+The finals columns were the following:
+activity
+subject
+tBodyAccMag-mean()
+tBodyAccMag-std()
+tGravityAccMag-mean()
+tGravityAccMag-std()
+tBodyAccJerkMag-mean()
+tBodyAccJerkMag-std()
+tBodyGyroMag-mean()
+tBodyGyroMag-std()
+tBodyGyroJerkMag-mean()
+tBodyGyroJerkMag-std()
+fBodyAccMag-mean()
+fBodyAccMag-std()
+fBodyBodyAccJerkMag-mean()
+fBodyBodyAccJerkMag-std()
+fBodyBodyGyroMag-mean()
+fBodyBodyGyroMag-std()
+fBodyBodyGyroJerkMag-mean()
+fBodyBodyGyroJerkMag-std()
+
