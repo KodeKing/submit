@@ -1,0 +1,13 @@
+README.md
+
+This repository, Submit, is for the Coursera class, Getting and Cleaning Data
+
+It consists of the following:
+*** This README file.
+*** project.R program file
+*** CodeBook.RM - the code book explaining the variables, the data,
+    and transformations done and cleaning steps performed.
+*** Project.csv - this CSV file is the tidy data set produced by
+    project.R.  It was renamed to project.txt for submission to
+    Coursera
+    
